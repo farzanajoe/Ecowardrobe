@@ -5,7 +5,7 @@ import csv
 import statistics
 from flask_cors import CORS
 
-app = Flask(__name__, template_folder='template')
+app = Flask(__name__)
 CORS(app)
 
 # ---------------------------------------------------------
@@ -123,6 +123,14 @@ def choose_brand_for_type(brand_type: str):
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/recommend')
+def recommend_page():
+    return render_template('recommend.html')
+
+@app.route('/result')
+def result_page():
+    return render_template('result.html')
 
 @app.route("/<path:filename>", methods=["GET"])
 def serve_static(filename):
