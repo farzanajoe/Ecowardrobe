@@ -120,6 +120,11 @@ def choose_brand_for_type(brand_type: str):
 # ---------------------------------------------------------
 # Routes
 # ---------------------------------------------------------
+# Add this route for the home page
+@app.route('/')
+def home():
+    return render_template('index.html')
+
 @app.route("/", methods=["GET"])
 def serve_index():
     return send_from_directory(os.path.dirname(__file__), "index.html")
