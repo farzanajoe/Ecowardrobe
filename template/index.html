@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoWardrobe - Should You Buy This?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon">🌿</div>
+            <h1>EcoWardrobe</h1>
+        </div>
+        <div class="header-actions">
+            <button class="icon-btn">👤</button>
+            <button class="icon-btn menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h2>Should You Buy This Item?</h2>
+            <p class="subtitle">Let AI predict if you'll actually wear it 30+ times</p>
+        </div>
+
+        <!-- Form Card -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Item Details</h3>
+                <p class="text-muted">Tell us about the clothing item you're considering</p>
+            </div>
+
+            <form action="result.html" method="GET" id="predictionForm" class="prediction-form">
+                <!-- Two Column Grid -->
+                <div class="form-grid">
+                    
+                    <!-- Left Column -->
+                    <div class="form-column">
+                        
+                        <!-- Item Type -->
+                        <div class="form-group">
+                            <label for="Clothing_Type">
+                                <span class="label-number">1.</span> Item Type
+                            </label>
+                            <select id="item_type" name="item_type" required>
+                                <option value="">Select item type</option>
+                                <option value="Tshirt">T-Shirt</option>
+                                <option value="Jacket">Jacket</option>
+                                <option value="Jeans">Jeans</option>
+                                <option value="Sweater">Sweater</option>
+                                <option value="Dress">Dress</option>
+                                <option value="Shorts">Short</option>
+                                <option value="Coat">Coat</option>
+                                <option value="Blouse">Blouse</option>
+                                <option value="Hoodie">Hoodie</option>
+                            </select>
+                        </div>
+
+                        <!-- Material -->
+                        <div class="form-group">
+                            <label for="Material">
+                                <span class="label-number">2.</span> Material
+                            </label>
+                            <select id="Material" name="Material" required>
+                                <option value="">Select material</option>
+                                <option value="recycled_polyester">Recycled Polyester</option>
+                                <option value="hemp">Hemp</option>
+                                <option value="bamboo_fabric">Bamboo Fabric</option>
+                                <option value="organic_cotton">Organic Cotton 🌿</option>
+                                <option value="tencel">Tencel</option>
+                                <option value="vegan_leather">Vegan Leather</option>
+                            </select>
+                        </div>
+
+                        <!-- Condition -->
+                        <div class="form-group">
+                            <label for="condition">
+                                <span class="label-number">3.</span> Condition
+                            </label>
+                            <select id="Condition" name="Condition" required>
+                                <option value="">Select the clothing condition</option>
+                                <option value="New">New</option>
+                                <option value="Old">Old</option>
+                                <option value="Good">Good</option>
+                            </select>
+                        </div>
+
+                        <!-- Brand Type -->
+                        <div class="form-group">
+                            <label for="brand_type">
+                                <span class="label-number">4.</span> Brand Type
+                            </label>
+                            <select id="brand_type" name="brand_type" required>
+                                <option value="">Select brand type</option>
+                                <option value="fast_fashion">Fast Fashion (Zara, H&M, Shein)</option>
+                                <option value="mid_range">Mid-Range (COS, Mango, Uniqlo)</option>
+                                <option value="sustainable">Sustainable (Patagonia, Everlane)</option>
+                            </select>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="form-group">
+                            <label for="price">
+                                <span class="label-number">5.</span> Price (£)
+                            </label>
+                            <input type="number" id="price" name="price" placeholder="50" min="1" required>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="form-column">
+
+                        <!-- Season -->
+                        <div class="form-group">
+                            <label for="Seasonality">
+                                <span class="label-number">6.</span> Seasonality of the Clothing Type
+                            </label>
+                            <select id="Seasonality" name="Seasonality" required>
+                                <option value="">Select season</option>
+                                <option value="Spring">Spring 🌸</option>
+                                <option value="Summer">Summer ☀️</option>
+                                <option value="Fall/Autumn">Fall/Autumn 🍂</option>
+                                <option value="Winter">Winter ❄️</option>
+                                <option value="All_Season">All-Season</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary btn-large">
+                    <span class="btn-icon">🔮</span>
+                    PREDICT USAGE
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <span class="nav-icon">🔮</span>
+            <span class="nav-label">Predict</span>
+        </a>
+
+        <a href="recommend.html" class="nav-item">
+            <span class="nav-icon">ℹ️</span>
+            <span class="nav-label">About</span>
+        </a>
+    </nav>
+</body>
+</html>
