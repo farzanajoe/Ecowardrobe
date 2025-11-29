@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory, render_template
 from joblib import load
 import os
 import csv
@@ -120,14 +120,9 @@ def choose_brand_for_type(brand_type: str):
 # ---------------------------------------------------------
 # Routes
 # ---------------------------------------------------------
-# Add this route for the home page
 @app.route('/')
 def home():
     return render_template('index.html')
-
-@app.route("/", methods=["GET"])
-def serve_index():
-    return send_from_directory(os.path.dirname(__file__), "index.html")
 
 @app.route("/<path:filename>", methods=["GET"])
 def serve_static(filename):
